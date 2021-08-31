@@ -24,6 +24,10 @@ type RepositoryItemAsset struct {
 	Repository  string                       `json:"repository"`
 	Format      string                       `json:"format"`
 	Checksum    repositoryItemAssetsChecksum `json:"checksum"`
+	ContentType    string                    `json:"contentType"`
+	LastModified   string                    `json:"lastModified"`
+	BlobCreated    string                    `json:"blobCreated"`
+	LastDownloaded string                    `json:"lastDownloaded"`
 }
 
 type listAssetsResponse struct {
