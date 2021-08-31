@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"net/url"
 
-	nexus "github.com/sonatype-nexus-community/gonexus"
+	nexus "github.com/rothwerx/gonexus"
 )
 
 const restSearchComponent = "api/v2/search/component"

@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/sonatype-nexus-community/gonexus/iq"
+	"github.com/rothwerx/gonexus/iq"
 )
 
 // WebhookEventType identifies a webhook event typu

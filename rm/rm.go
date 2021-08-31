@@ -3,7 +3,7 @@ package nexusrm
 import (
 	"bytes"
 
-	nexus "github.com/sonatype-nexus-community/gonexus"
+	nexus "github.com/rothwerx/gonexus"
 )
 
 // RM is the interface which any Repository Manager implementation would need to satisfy

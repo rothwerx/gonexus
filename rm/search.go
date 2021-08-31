@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	nexus "github.com/sonatype-nexus-community/gonexus"
+	nexus "github.com/rothwerx/gonexus"
 )
 
 const (

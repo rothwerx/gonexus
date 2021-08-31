@@ -1,4 +1,4 @@
-# gonexus [![DepShield Badge](https://depshield.sonatype.org/badges/sonatype-nexus-community/gonexus/depshield.svg)](https://depshield.github.io) [![CircleCI](https://circleci.com/gh/sonatype-nexus-community/gonexus.svg?style=svg)](https://circleci.com/gh/sonatype-nexus-community/gonexus)
+# gonexus [![DepShield Badge](https://depshield.sonatype.org/badges/rothwerx/gonexus/depshield.svg)](https://depshield.github.io) [![CircleCI](https://circleci.com/gh/rothwerx/gonexus.svg?style=svg)](https://circleci.com/gh/rothwerx/gonexus)
 
 Provides a go client library for connecting to, and interacting with, [Sonatype](//www.sonatype.com) Nexus applications such as Nexus Repository Manager and Nexus IQ Server.
 
@@ -6,12 +6,12 @@ Provides a go client library for connecting to, and interacting with, [Sonatype]
 
 The library is broken into two packages. One for each application.
 
-### nexusrm [![GoDoc](http://godoc.org/github.com/sonatype-nexus-community/gonexus/rm?status.png)](http://godoc.org/github.com/sonatype-nexus-community/gonexus/rm) [![nexusrm coverage](https://gocover.io/_badge/github.com/sonatype-nexus-community/gonexus/rm?0 "nexusrm coverage")](http://gocover.io/github.com/sonatype-nexus-community/gonexus/rm)
+### nexusrm [![GoDoc](http://godoc.org/github.com/rothwerx/gonexus/rm?status.png)](http://godoc.org/github.com/rothwerx/gonexus/rm) [![nexusrm coverage](https://gocover.io/_badge/github.com/rothwerx/gonexus/rm?0 "nexusrm coverage")](http://gocover.io/github.com/rothwerx/gonexus/rm)
 
 Create a connection to an instance of Nexus Repository Manager
 
 ```go
-// import "github.com/sonatype-nexus-community/gonexus/rm"
+// import "github.com/rothwerx/gonexus/rm"
 rm, err := nexusrm.New("http://localhost:8081", "username", "password")
 if err != nil {
     panic(err)
@@ -55,12 +55,12 @@ if err != nil {
 
 _Legend_: :full_moon: complete :new_moon: untouched :waning_crescent_moon::last_quarter_moon::waning_gibbous_moon: partial support
 
-### nexusiq [![GoDoc](http://godoc.org/github.com/sonatype-nexus-community/gonexus/iq?status.png)](http://godoc.org/github.com/sonatype-nexus-community/gonexus/iq) [![nexusiq coverage](https://gocover.io/_badge/github.com/sonatype-nexus-community/gonexus/iq?0 "nexusiq coverage")](http://gocover.io/github.com/sonatype-nexus-community/gonexus/iq)
+### nexusiq [![GoDoc](http://godoc.org/github.com/rothwerx/gonexus/iq?status.png)](http://godoc.org/github.com/rothwerx/gonexus/iq) [![nexusiq coverage](https://gocover.io/_badge/github.com/rothwerx/gonexus/iq?0 "nexusiq coverage")](http://gocover.io/github.com/rothwerx/gonexus/iq)
 
 Create a connection to an instance of Nexus IQ Server
 
 ```go
-// import "github.com/sonatype-nexus-community/gonexus/iq"
+// import "github.com/rothwerx/gonexus/iq"
 iq, err := nexusiq.New("http://localhost:8070", "username", "password")
 if err != nil {
     panic(err)
@@ -99,7 +99,7 @@ if err != nil {
 
 _Legend_: :full_moon: complete :new_moon: untouched :waning_crescent_moon::last_quarter_moon::waning_gibbous_moon: partial support
 
-##### iqwebhooks [![GoDoc](http://godoc.org/github.com/sonatype-nexus-community/gonexus/iq/iqwebhooks?status.png)](http://godoc.org/github.com/sonatype-nexus-community/gonexus/iq/iqwebhooks) [![nexusiq webhooks coverage](https://gocover.io/_badge/github.com/sonatype-nexus-community/gonexus/iq/iqwebhooks/?0 "nexusiq webhooks coverage")](http://gocover.io/github.com/sonatype-nexus-community/gonexus/iq/iqwebhooks)
+##### iqwebhooks [![GoDoc](http://godoc.org/github.com/rothwerx/gonexus/iq/iqwebhooks?status.png)](http://godoc.org/github.com/rothwerx/gonexus/iq/iqwebhooks) [![nexusiq webhooks coverage](https://gocover.io/_badge/github.com/rothwerx/gonexus/iq/iqwebhooks/?0 "nexusiq webhooks coverage")](http://gocover.io/github.com/rothwerx/gonexus/iq/iqwebhooks)
 
 The `iq/iqwebhooks` subpackage provides structs for all of the event types along with helper functions.
 
@@ -109,7 +109,7 @@ The handler will place any webhook event it finds in a channel to be consumed at
 An example of using the handler to listen for Application Evaluation events:
 
 ```go
-// import "github.com/sonatype-nexus-community/gonexus/iq/webhooks"
+// import "github.com/rothwerx/gonexus/iq/webhooks"
 appEvals, _ := iqwebhooks.ApplicationEvaluationEvents()
 
 go func() {
@@ -121,7 +121,7 @@ go func() {
 http.HandleFunc("/ingest", iqwebhooks.Listen)
 ```
 
-See the [documentation](https://godoc.org/github.com/sonatype-nexus-community/gonexus/iq/iqwebhooks#example-Listen) for a full example showing other event types.
+See the [documentation](https://godoc.org/github.com/rothwerx/gonexus/iq/iqwebhooks#example-Listen) for a full example showing other event types.
 
 ## The Fine Print
 
